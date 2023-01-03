@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>full website 1.0</title>
+    <link rel="stylesheet" href="full website 1.0/css/full website.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/0f471979b7.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,200;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,200;1,400;1,500;1,700&display=swap');
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="#"><img src="./full website 1.0/images/logo.png" alt=""></a>
+            <div class="nav-links" id="NavLinks">
+                <!-- we added the id to be able to control it with js
+                so keep in mind that class is for css and id is for js -->
+                <div class="xmark">
+                    <i class="fa-solid fa-xmark" onclick="hidemenu ()"></i>
+                </div>
+                <!-- onclick is a js command -->
+                <!-- we have assigned the hide menu function that we'll use in the js script -->
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="bars">
+                <i class="fa-solid fa-bars" onclick="showmenu ()"></i>
+            </div>
+            <!-- onclick is a js command
+            we have assigned the show menu function that we'll later use in the js script -->
+        </nav>
+        <div class="text-box">
+            <h1>world's universtity</h1>
+            <p>Css is a pain in the ass</p>
+            <a href="#" class="visit-button">visit us to find out more.</a>
+
+        </div>
+    </section>
+    <!-- java script code for the burger menu toggle -->
+    <script>
+        var NavLinks = document.getElementById("NavLinks")
+        function showmenu() {
+            NavLinks.style.top = "0vh";
+            // this command edits the -205px in the css file to 0px upon clicking the burger menu
+        }
+        function hidemenu() {
+            NavLinks.style.top = "-100vh  ";
+        }
+    </script>
+    <section class="courses">
+        <h1>Our Courses</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium veniam sunt labore, explicabo adipisci
+            deserunt nisi quasi facilis, commodi illo nemo nobis, tempora harum modi. Nulla fugit minima quas ea.</p>
+        <div class="row">
+            <div class="course-column">
+                <h3>html course</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut harum voluptatibus consequuntur ipsum
+                    adipisci enim tenetur aperiam, quasi eos eius molestias quis amet porro ad voluptas odio est
+                    pariatur debitis!</p>
+            </div>
+            <div class="course-column">
+                <h3>css course</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut expedita, sit eaque harum repellendus
+                    odio tempora necessitatibus mollitia pariatur quas magni reprehenderit rem minus ipsum dolore ab eos
+                    nobis quis.</p>
+            </div>
+            <div class="course-column">
+                <h3>java script course</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nulla dolor, beatae aliquid
+                    consequuntur soluta veritatis? Repellendus aut voluptates corrupti nobis, voluptatum hic doloremque
+                    veniam soluta ex ullam molestias tempore!</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
